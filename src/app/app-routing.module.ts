@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
 import { EventBindingComponent } from './shares/angular/template-fundamentals/event-binding/event-binding.component';
 import { InterpolationExpressionsComponent } from './shares/angular/template-fundamentals/interpolation-expressions/interpolation-expressions.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'ngif-ngtemplate-syntax',
     component:NgifNgtemplateSyntaxComponent
+  },
+  {
+    path: 'ngfor',
+    component: NgforComponent
   }
 ];
 

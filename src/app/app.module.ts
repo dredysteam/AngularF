@@ -19,6 +19,7 @@ import { ButtonComponent } from './shares/bootstrap/button/button.component';
 
 // shares angular rendering flow
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
+import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 
 
 
@@ -33,7 +34,8 @@ import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/
     TwoWayBindingComponent,
     TemplateRefVariablesComponent,
     ButtonComponent,
-    NgifNgtemplateSyntaxComponent
+    NgifNgtemplateSyntaxComponent,
+    NgforComponent
     
   ],
   imports: [
@@ -49,7 +51,8 @@ import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/
     EventBindingComponent,
     TwoWayBindingComponent,
     TemplateRefVariablesComponent,
-    NgifNgtemplateSyntaxComponent
+    NgifNgtemplateSyntaxComponent,
+    NgforComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
