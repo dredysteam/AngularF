@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
 import { EventBindingComponent } from './shares/angular/template-fundamentals/event-binding/event-binding.component';
 import { InterpolationExpressionsComponent } from './shares/angular/template-fundamentals/interpolation-expressions/interpolation-expressions.component';
 import { PropertyBindingComponent } from './shares/angular/template-fundamentals/property-binding/property-binding.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'template-ref-variables',
     component: TemplateRefVariablesComponent
+  },
+  {
+    path: 'ngif-ngtemplate-syntax',
+    component:NgifNgtemplateSyntaxComponent
   }
 ];
 

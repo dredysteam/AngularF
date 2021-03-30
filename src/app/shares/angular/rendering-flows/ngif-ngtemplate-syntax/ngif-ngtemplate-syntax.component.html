@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col main">
+      <h4>NgIf example</h4>
+      <h6>
+        Write some text inside input OR Delete text & Click outside de input box
+      </h6>
+      <div class="app-input">
+        <input (blur)="hasValue($event)" class="form-control" type="text" />
+      </div>
+      <div *ngIf="inputHasValue" id="message">
+        <strong>Input has a value</strong>
+      </div>
+      <div *ngIf="!inputHasValue" id="message">
+        <strong>Input don't has a value</strong>
+      </div>
+    </div>
+    <div class="col main">
+      <input type="text" (input)="handleChange($event.target.value)" />
+      <div *ngIf="value.length">
+        <strong>Searching for ....</strong>{{ value }}
+      </div>
+      <div *ngIf="value == ''"><strong>No data</strong></div>
+    </div>
+    <div class="col main">
+      <ng-template [ngIf]="value.length > 2" ]>
+        <h6>Example using ngtemplate</h6>
+        <div><strong>Searching for ....</strong>{{ value }}</div>
+        <div *ngIf="value == ''"><strong>No data</strong></div>
+      </ng-template>
+    </div>
+  </div>
+</div>

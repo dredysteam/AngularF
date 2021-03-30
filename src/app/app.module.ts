@@ -17,6 +17,9 @@ import { TwoWayBindingComponent } from './shares/angular/template-fundamentals/t
 import {TemplateRefVariablesComponent } from './shares/angular/template-fundamentals/template-ref-variables/template-ref-variables.component';
 import { ButtonComponent } from './shares/bootstrap/button/button.component';
 
+// shares angular rendering flow
+import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
+
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { ButtonComponent } from './shares/bootstrap/button/button.component';
     EventBindingComponent,
     TwoWayBindingComponent,
     TemplateRefVariablesComponent,
-    ButtonComponent
+    ButtonComponent,
+    NgifNgtemplateSyntaxComponent
     
   ],
   imports: [
@@ -44,7 +48,8 @@ import { ButtonComponent } from './shares/bootstrap/button/button.component';
     PropertyBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
-    TemplateRefVariablesComponent
+    TemplateRefVariablesComponent,
+    NgifNgtemplateSyntaxComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
