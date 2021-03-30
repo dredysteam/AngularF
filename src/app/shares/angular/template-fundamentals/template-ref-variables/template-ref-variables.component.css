@@ -1,0 +1,20 @@
+button {
+  margin-right: 5px;
+  justify-content: flex-end;
+}
+
+.app-input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.example {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#value_box {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+}

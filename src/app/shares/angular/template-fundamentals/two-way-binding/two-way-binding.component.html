@@ -1,0 +1,28 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-6">
+      <h4>Two Way Binding Example</h4>
+      <div>
+        <h6>Using <strong>NgModelChange</strong></h6>
+        <input
+          type="text"
+          [ngModel]="name"
+          (ngModelChange)="handleChange($event)"
+        />
+      </div>
+      <div>
+        {{ name }}
+      </div>
+    </div>
+    <div class="col-6">
+      <h4>Two Way Binding Example</h4>
+      <div>
+        <h6>Using <strong>Banana Box</strong></h6>
+        <input type="text" [(ngModel)]="name" />
+      </div>
+      <div>
+        {{ name }}
+      </div>
+    </div>
+  </div>
+</div>

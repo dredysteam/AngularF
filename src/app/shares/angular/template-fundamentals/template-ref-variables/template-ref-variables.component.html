@@ -1,0 +1,16 @@
+<div class="container main">
+  <div class="row">
+    <div class="col">
+      <h4>Template #ref variables example</h4>
+      <div class="app-input">
+        <input class="form-control" type="text" #name />
+      </div>
+      <div class="example">
+        <button class="btn btn-primary" (click)="handleClick(name.value)">
+          Click me
+        </button>
+      </div>
+    </div>
+    <div *ngIf="value" id="value_box">You put : {{ value }}</div>
+  </div>
+</div>
