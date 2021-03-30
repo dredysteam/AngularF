@@ -21,6 +21,7 @@ import { ButtonComponent } from './shares/bootstrap/button/button.component';
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
 import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngclass.component';
+import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngstyle.component';
 
 
 
@@ -37,7 +38,8 @@ import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngcla
     ButtonComponent,
     NgifNgtemplateSyntaxComponent,
     NgforComponent,
-    NgclassComponent
+    NgclassComponent,
+    NgstyleComponent
     
   ],
   imports: [
@@ -55,7 +57,8 @@ import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngcla
     TemplateRefVariablesComponent,
     NgifNgtemplateSyntaxComponent,
     NgforComponent,
-    NgclassComponent
+    NgclassComponent,
+    NgstyleComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,28 @@
+<div class="container main">
+  <div class="row">
+    <div class="col">
+      <h5>Style Binding Example</h5>
+      <ul>
+        <li *ngFor="let item of students; let i = index">
+          <span
+            class="status"
+            [style.backgroundColor]="item.isHonor ? 'green' : 'red'"
+          ></span>
+          {{ i }} : {{ item.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <h5>NgStyle Example</h5>
+      <ul>
+        <li *ngFor="let item of students; let i = index">
+          <span
+            class="status"
+            [ngStyle]="{ backgroundColor: item.isHonor ? 'green' : 'red' }"
+          ></span>
+          {{ i }} : {{ item.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
