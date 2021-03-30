@@ -1,0 +1,27 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-8">
+      <h5>NgClass Example</h5>
+      <ul>
+        <li *ngFor="let item of students; let i = index">
+          <span
+            class="status"
+            [ngClass]="{
+              isHonored: item.isHonor,
+              isNotHonored: !item.isHonor
+            }"
+          ></span>
+          {{ i }} : {{ item.name }}
+        </li>
+      </ul>
+    </div>
+    <!-- <h5>Using ngFor inside ngtemplate</h5>
+    <div class="col-4">
+      <ng-template #name ngFor let-item let-i="index" [ngForOf]="students">
+        <ul>
+          <li>{{ i }} : {{ item.name }}</li>
+        </ul>
+      </ng-template>
+    </div> -->
+  </div>
+</div>

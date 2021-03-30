@@ -1,0 +1,17 @@
+ul {
+  display: inline;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  margin: 8px 10px 0 0;
+  border-radius: 50%;
+  background: red;
+  display: block;
+  float: left;
+}
+
+.status.isHonored {
+  background: green;
+}

@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../../../interfaces/student';
-
-
-
 @Component({
-  selector: 'app-ngfor',
-  templateUrl: './ngfor.component.html',
-  styleUrls: ['./ngfor.component.css']
+  selector: 'app-ngclass',
+  templateUrl: './ngclass.component.html',
+  styleUrls: ['./ngclass.component.css']
 })
-export class NgforComponent implements OnInit {
-
-  // names: string[] = ['Juan', 'Julia', 'Ana', 'Teresa', 'Pedro'];
-
-  students: Student[] = [
+export class NgclassComponent implements OnInit {
+   students: Student[] = [
     {
       id: 1,
       name: 'Pedro',

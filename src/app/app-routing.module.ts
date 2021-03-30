@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngclass.component';
 import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
 import { EventBindingComponent } from './shares/angular/template-fundamentals/event-binding/event-binding.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'ngfor',
     component: NgforComponent
+  },
+  {
+    path: 'ngclass',
+    component: NgclassComponent
   }
 ];
 
