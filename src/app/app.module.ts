@@ -26,6 +26,7 @@ import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pip
 
 // features modules
 import { FeatureExampleModule} from '../app/feature-example/feature-example.module';
+import { CompArchFeatModulesComponent } from './shares/angular/component-architecture-features-modules/comp-arch-feat-modules/comp-arch-feat-modules.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { FeatureExampleModule} from '../app/feature-example/feature-example.modu
     NgforComponent,
     NgclassComponent,
     NgstyleComponent,
-    PipesuseComponent
+    PipesuseComponent,
+    CompArchFeatModulesComponent
     
   ],
   imports: [

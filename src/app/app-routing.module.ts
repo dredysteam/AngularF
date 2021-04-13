@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CompArchFeatModulesComponent } from './shares/angular/component-architecture-features-modules/comp-arch-feat-modules/comp-arch-feat-modules.component';
 import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngclass.component';
 import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'pipesuse',
     component:PipesuseComponent
+  },
+  {
+    path: 'comparch',
+    component: CompArchFeatModulesComponent
   }
 ];
 
