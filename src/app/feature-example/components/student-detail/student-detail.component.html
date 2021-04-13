@@ -2,6 +2,24 @@
   <div class="row">
     <div class="col">
       <h6>Student Detail</h6>
+
+      <ul>
+        <li>
+          {{ detail.name }}
+          <p>
+            Chech In Date:
+            {{
+              detail.isHonor
+                ? (detail.enrollmentDate | date: "yMMMMd" | uppercase)
+                : "No Honor enrollment Date"
+            }}
+          </p>
+          <p>
+            Teachers :
+            {{ detail.teachers?.length || 0 }}
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

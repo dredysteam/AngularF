@@ -3,24 +3,11 @@
     <div class="col">
       <h5>Smart Component Example</h5>
       <app-student-count [items]="students"></app-student-count>
-      <ul>
-        <li *ngFor="let item of students; let i = index">
-          {{ i }} : {{ item.name }}
-          <p>
-            Chech In Date:
-            {{
-              item.isHonor
-                ? (item.enrollmentDate | date: "yMMMMd" | uppercase)
-                : "No Honor enrollment Date"
-            }}
-          </p>
-          <p>
-            Teachers :
-            {{ item.teachers?.length || 0 }}
-          </p>
-        </li>
-      </ul>
-      <app-student-count></app-student-count>
+
+      <app-student-detail
+        *ngFor="let student of students"
+        [detail]="student"
+      ></app-student-detail>
     </div>
   </div>
 </div>
