@@ -8,7 +8,14 @@ import { Student} from '../../../shares/interfaces/student';
 })
 export class StudentDashboardComponent implements OnInit {
 
-  students: Student[] = [
+  students: Student[];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    console.log('ngOnInit');
+
+    this.students = [
     {
       id: 1,
       name: 'Pedro',
@@ -42,10 +49,6 @@ export class StudentDashboardComponent implements OnInit {
       teachers: [{name: 'Juana', age: 39},{name: 'Alexa', age: 45}]
     }
   ]
-
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
 }
