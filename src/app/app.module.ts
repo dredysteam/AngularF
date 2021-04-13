@@ -24,6 +24,9 @@ import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngcla
 import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngstyle.component';
 import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pipesuse.component';
 
+// features modules
+import { FeatureExampleModule} from '../app/feature-example/feature-example.module';
+
 
 @NgModule({
   declarations: [
@@ -44,9 +47,12 @@ import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pip
     
   ],
   imports: [
+    // angular modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // custom modules
+    FeatureExampleModule
   ],
   exports: [
     NavComponent,
