@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col">
       <h5>Smart Component Example</h5>
+      <app-student-count [items]="students"></app-student-count>
       <ul>
         <li *ngFor="let item of students; let i = index">
           {{ i }} : {{ item.name }}
@@ -19,6 +20,7 @@
           </p>
         </li>
       </ul>
+      <app-student-count></app-student-count>
     </div>
   </div>
 </div>
