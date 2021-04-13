@@ -1,0 +1,25 @@
+<div class="container main">
+  <div class="row">
+    <div class="col">
+      <h5>Pipe Example</h5>
+      <ul>
+        <li *ngFor="let item of students; let i = index">
+          {{ i }} : {{ item.name }}
+          <p>
+            Chech In Date:
+            {{
+              item.isHonor
+                ? (item.enrollmentDate | date: "yMMMMd" | uppercase)
+                : "No Honor enrollment Date"
+            }}
+          </p>
+          <p>
+            Teachers :
+            {{ item.teachers?.length || 0 }}
+          </p>
+          <p>{{ item | json }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

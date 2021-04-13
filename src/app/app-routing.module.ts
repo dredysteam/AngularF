@@ -4,6 +4,7 @@ import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngcla
 import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
 import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngstyle.component';
+import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pipesuse.component';
 import { EventBindingComponent } from './shares/angular/template-fundamentals/event-binding/event-binding.component';
 import { InterpolationExpressionsComponent } from './shares/angular/template-fundamentals/interpolation-expressions/interpolation-expressions.component';
 import { PropertyBindingComponent } from './shares/angular/template-fundamentals/property-binding/property-binding.component';
@@ -43,9 +44,13 @@ const routes: Routes = [
     path: 'ngclass',
     component: NgclassComponent
   },
-    {
+  {
     path: 'ngstyle',
     component: NgstyleComponent
+  },
+  {
+    path: 'pipesuse',
+    component:PipesuseComponent
   }
 ];
 

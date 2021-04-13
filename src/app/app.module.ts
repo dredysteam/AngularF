@@ -22,7 +22,7 @@ import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/
 import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.component';
 import { NgclassComponent } from './shares/angular/rendering-flows/ngclass/ngclass.component';
 import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngstyle.component';
-
+import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pipesuse.component';
 
 
 @NgModule({
@@ -39,7 +39,8 @@ import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngsty
     NgifNgtemplateSyntaxComponent,
     NgforComponent,
     NgclassComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    PipesuseComponent
     
   ],
   imports: [
@@ -58,7 +59,8 @@ import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngsty
     NgifNgtemplateSyntaxComponent,
     NgforComponent,
     NgclassComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    PipesuseComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
