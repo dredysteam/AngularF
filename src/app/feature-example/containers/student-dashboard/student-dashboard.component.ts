@@ -13,8 +13,6 @@ export class StudentDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('ngOnInit');
-
     this.students = [
     {
       id: 1,
@@ -49,6 +47,23 @@ export class StudentDashboardComponent implements OnInit {
       teachers: [{name: 'Juana', age: 39},{name: 'Alexa', age: 45}]
     }
   ]
+  }
+
+  handleRemove(event: Student) {
+    console.log(event);
+    this.students = this.students.filter((student: Student) => {
+      return student.id !== event.id;
+    })
+  }
+
+  handleEdit(event: Student) {
+    console.log(event);
+    this.students = this.students.map((student: Student) => {
+       if (student.id === event.id) {
+        student = Object.assign({}, student, event);
+      }
+      return student;
+    })
   }
 
 }

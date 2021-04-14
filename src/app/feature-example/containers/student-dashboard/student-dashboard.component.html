@@ -2,11 +2,15 @@
   <div class="row">
     <div class="col">
       <h5>Smart Component Example</h5>
+      <p *ngFor="let item of students">{{ item.name }}</p>
+      <h6>Dump Component Example</h6>
       <app-student-count [items]="students"></app-student-count>
-
+      <h6>Dump Component Students Detail</h6>
       <app-student-detail
         *ngFor="let student of students"
         [detail]="student"
+        (edit)="handleEdit($event)"
+        (remove)="handleRemove($event)"
       ></app-student-detail>
     </div>
   </div>
