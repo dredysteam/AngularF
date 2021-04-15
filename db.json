@@ -16,10 +16,10 @@
   "profile": {
     "name": "typicode"
   },
-  "students":[
+  "students": [
     {
       "id": 1,
-      "name": "Pedro",
+      "name": "Pedro Jose",
       "isHonor": true,
       "enrollmentDate": 1490742000000,
       "teachers": "[{name: 'Juana', age: 39},{name: 'Alexa', age: 45}]"
@@ -28,11 +28,20 @@
       "id": 2,
       "name": "Juan",
       "isHonor": false,
-      "teachers": [{"name": "Juana", "age": 39},{"name": "Alexa", "age": 45}]
+      "teachers": [
+        {
+          "name": "Juana",
+          "age": 39
+        },
+        {
+          "name": "Alexa",
+          "age": 45
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "Julia",
+      "name": "Julia Rincon",
       "isHonor": true,
       "enrollmentDate": 1490742000000,
       "teachers": null
@@ -47,8 +56,16 @@
       "id": 5,
       "name": "Teresa",
       "isHonor": false,
-      "teachers": [{"name": "Juana", "age": 39},{"name": "Alexa", "age": 45}]
+      "teachers": [
+        {
+          "name": "Juana",
+          "age": 39
+        },
+        {
+          "name": "Alexa",
+          "age": 45
+        }
+      ]
     }
   ]
-  
 }

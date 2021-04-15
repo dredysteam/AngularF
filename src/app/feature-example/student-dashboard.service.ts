@@ -20,4 +20,11 @@ export class StudentDashboardService {
       return response;
     }))
   }
+
+  updateStudent(student:Student): Observable<Student>{
+    return this.http.put(`${LOCAL_API}/students/${student.id}`,student).pipe(
+      map((response: any) => {
+        return response;
+      }))
+  }
 }
