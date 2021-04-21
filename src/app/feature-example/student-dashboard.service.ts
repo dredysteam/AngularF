@@ -1,7 +1,7 @@
 import { HttpClient, HttpResponse,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map, catchError} from 'rxjs/operators';
 // import 'rxjs/add/operator/toPromise';
 // interfaces
 import { Student } from '../shares/interfaces/student';
@@ -17,9 +17,10 @@ export class StudentDashboardService {
   }
 
   getStudents(): Observable<Student[]> {
-    return this.http.get(`${LOCAL_API}/students`).pipe(map((response: any) => {
+    return this.http.get(`${LOCAL_API}/students`)
+      .pipe(map((response: any) => {
       return response;
-    }))
+    }),catchError((error:any)=> of(error)))
   }
   // PROMISE EXAMPLE ???
   //  getStudents(): Promise<Student[]> {
@@ -33,10 +34,12 @@ export class StudentDashboardService {
         'Content-Type': 'application/json',
       }),
     };
-    return this.http.put(`${LOCAL_API}/students/${student.id}`,student, httpOptions).pipe(
+    return this.http.put(`${LOCAL_API}/students/${student.id}`, student, httpOptions)
+      .pipe(
       map((response: any) => {
         return response;
-      }))
+      }),catchError((error:any)=> of(error))
+      )
   }
 
   removeStudent(student: Student): Observable<Student>{

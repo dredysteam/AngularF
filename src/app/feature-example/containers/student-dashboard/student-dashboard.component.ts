@@ -17,7 +17,7 @@ export class StudentDashboardComponent implements OnInit {
     // When use Promise change subscribe for then
     this.studentDashobardService.getStudents().subscribe((data: Student[]) => {
       this.students = data;
-    });
+    },(error:any)=> console.log('Response Error!!' + error));
   }
 
   handleRemove(event: Student) {
