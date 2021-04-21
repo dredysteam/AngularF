@@ -20,14 +20,15 @@ export class StudentDashboardComponent implements OnInit {
   }
 
   handleRemove(event: Student) {
-    // console.log(event);
-    this.students = this.students.filter((student: Student) => {
-      return student.id !== event.id;
-    })
+    this.studentDashobardService.removeStudent(event)
+      .subscribe((data:Student) => {
+        this.students = this.students.filter((student: Student) => {
+          return student.id !== event.id;
+        })
+      })
   }
 
   handleEdit(event: Student) {
-    // console.log(event);
     this.studentDashobardService.updateStudent(event).subscribe((data:Student) => {
       this.students = this.students.map((student: Student) => {
        if (student.id === data.id) {

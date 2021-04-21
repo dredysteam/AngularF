@@ -27,4 +27,12 @@ export class StudentDashboardService {
         return response;
       }))
   }
+
+  removeStudent(student: Student): Observable<Student>{
+    return this.http.delete(`${LOCAL_API}/students/${student.id}`).pipe(
+      map((response: any) => {
+        return response;
+      })
+    )
+  }
 }
