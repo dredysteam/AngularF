@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -21,8 +21,13 @@ export class StudentDashboardService {
     }))
   }
 
-  updateStudent(student:Student): Observable<Student>{
-    return this.http.put(`${LOCAL_API}/students/${student.id}`,student).pipe(
+  updateStudent(student: Student): Observable<Student>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    };
+    return this.http.put(`${LOCAL_API}/students/${student.id}`,student, httpOptions).pipe(
       map((response: any) => {
         return response;
       }))
