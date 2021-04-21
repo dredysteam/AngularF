@@ -2,6 +2,7 @@ import { HttpClient, HttpResponse,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+// import 'rxjs/add/operator/toPromise';
 // interfaces
 import { Student } from '../shares/interfaces/student';
 
@@ -20,6 +21,11 @@ export class StudentDashboardService {
       return response;
     }))
   }
+  // PROMISE EXAMPLE ???
+  //  getStudents(): Promise<Student[]> {
+  //   return this.http.get(`${LOCAL_API}/students`).toPromise()
+  //     .then((response: any) => response)
+  // }
 
   updateStudent(student: Student): Observable<Student>{
     const httpOptions = {

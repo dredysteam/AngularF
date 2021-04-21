@@ -14,6 +14,7 @@ export class StudentDashboardComponent implements OnInit {
   constructor(private studentDashobardService: StudentDashboardService) { }
 
   ngOnInit(): void {
+    // When use Promise change subscribe for then
     this.studentDashobardService.getStudents().subscribe((data: Student[]) => {
       this.students = data;
     });
