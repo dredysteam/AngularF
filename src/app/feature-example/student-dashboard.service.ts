@@ -28,6 +28,11 @@ export class StudentDashboardService {
   //     .then((response: any) => response)
   // }
 
+  getStudent(id:number): Observable<Student>{
+    return this.http.get(`${LOCAL_API}/students/${id}`)
+    .pipe(map((response:any)=> response))
+  }
+
   updateStudent(student: Student): Observable<Student>{
     const httpOptions = {
       headers: new HttpHeaders({

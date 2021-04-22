@@ -6,6 +6,7 @@ import { NgforComponent } from './shares/angular/rendering-flows/ngfor/ngfor.com
 import { NgifNgtemplateSyntaxComponent } from './shares/angular/rendering-flows/ngif-ngtemplate-syntax/ngif-ngtemplate-syntax.component';
 import { NgstyleComponent } from './shares/angular/rendering-flows/ngstyle/ngstyle.component';
 import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pipesuse.component';
+import { TdfComponent } from './shares/angular/template-driven-forms/tdf/tdf.component';
 import { EventBindingComponent } from './shares/angular/template-fundamentals/event-binding/event-binding.component';
 import { InterpolationExpressionsComponent } from './shares/angular/template-fundamentals/interpolation-expressions/interpolation-expressions.component';
 import { PropertyBindingComponent } from './shares/angular/template-fundamentals/property-binding/property-binding.component';
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'comparch',
     component: CompArchFeatModulesComponent
+  }
+  , {
+    path: 'comparch/1',
+    component:TdfComponent
   }
 ];
 

@@ -27,6 +27,7 @@ import { PipesuseComponent } from './shares/angular/rendering-flows/pipesuse/pip
 // features modules
 import { FeatureExampleModule} from '../app/feature-example/feature-example.module';
 import { CompArchFeatModulesComponent } from './shares/angular/component-architecture-features-modules/comp-arch-feat-modules/comp-arch-feat-modules.component';
+import { TdfComponent } from './shares/angular/template-driven-forms/tdf/tdf.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CompArchFeatModulesComponent } from './shares/angular/component-archite
     NgclassComponent,
     NgstyleComponent,
     PipesuseComponent,
-    CompArchFeatModulesComponent
+    CompArchFeatModulesComponent,
+    TdfComponent
     
   ],
   imports: [
