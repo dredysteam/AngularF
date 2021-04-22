@@ -8,11 +8,19 @@ import { Student } from '../../../shares/interfaces/student';
 })
 export class StudentFormComponent implements OnInit {
 
+
   @Input()
   detail: Student;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleIsHonor(isHonor: boolean) {
+    if (isHonor) {
+      this.detail.enrollmentDate = Date.now();
+    }
+    
   }
 
 }

@@ -1,8 +1,50 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <form action="">Student Form(Dump)</form>
-      {{ detail | json }}
+      <form #form="ngForm">
+        Student Form(Dump)
+        {{ detail | json }}
+        <div>
+          Student Name:
+          <input type="text" name="name" [ngModel]="detail?.name" />
+        </div>
+        <div>
+          Student Id:
+          <input type="number" name="id" [ngModel]="detail?.id" />
+        </div>
+        <div>
+          In Honor Group?
+          <label>
+            <input
+              type="radio"
+              [value]="true"
+              name="isHonor"
+              [ngModel]="detail?.isHonor"
+              (ngModelChange)="toggleIsHonor($event)"
+            />
+            Yes
+          </label>
+          <label for="">
+            <input
+              type="radio"
+              [value]="false"
+              name="isHonor"
+              [ngModel]="detail?.isHonor"
+              (ngModelChange)="toggleIsHonor($event)"
+            />
+            No
+          </label>
+        </div>
+        <div *ngIf="form.value.isHonor">
+          Is Honor Enrollment Date:
+          <input
+            type="number"
+            name="enrollmentDate"
+            [ngModel]="detail?.enrollmentDate"
+          />
+        </div>
+        {{ form.value | json }}
+      </form>
     </div>
   </div>
 </div>
