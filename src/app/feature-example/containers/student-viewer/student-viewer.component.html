@@ -1,6 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col"></div>
-    {{ student | json }}
+    <div class="col-3">
+      Student Viewer(Container)
+      {{ student | json }}
+    </div>
+    <div class="col-9">
+      <app-student-form [detail]="student"></app-student-form>
+    </div>
   </div>
 </div>
