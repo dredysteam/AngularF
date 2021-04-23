@@ -19,10 +19,11 @@
   "students": [
     {
       "id": 1,
-      "name": "Pedro Jose",
+      "name": null,
       "isHonor": true,
       "enrollmentDate": 1490742000000,
-      "teachers": "[{name: 'Juana', age: 39},{name: 'Alexa', age: 45}]"
+      "teachers": "[{name: 'Juana', age: 39},{name: 'Alexa', age: 45}]",
+      "studyArea":"Area3"
     },
     {
       "id": 2,
@@ -37,20 +38,23 @@
           "name": "Alexa",
           "age": 45
         }
-      ]
+      ],
+      "studyArea":null
     },
     {
       "id": 3,
       "name": "Julia Rincon",
       "isHonor": true,
       "enrollmentDate": 1490742000000,
-      "teachers": null
+      "teachers": null,
+      "studyArea":"Area1"
     },
     {
       "id": 4,
       "name": "Ana",
       "isHonor": false,
-      "teachers": null
+      "teachers": null,
+      "studyArea":null
     },
     {
       "id": 5,
@@ -65,7 +69,8 @@
           "name": "Alexa",
           "age": 45
         }
-      ]
+      ],
+      "studyArea":"Area2]"
     }
   ]
 }

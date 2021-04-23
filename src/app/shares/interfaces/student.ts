@@ -5,4 +5,5 @@ export interface Student{
   isHonor: boolean,
   enrollmentDate?: number,
   teachers?: Teacher[];
+  studyArea?: string;
 }

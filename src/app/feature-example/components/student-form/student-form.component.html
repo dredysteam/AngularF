@@ -6,13 +6,39 @@
         {{ detail | json }}
         <div>
           Student Name:
-          <input type="text" name="name" [ngModel]="detail?.name" />
+          <input
+            type="text"
+            name="name"
+            required
+            #name="ngModel"
+            [ngModel]="detail?.name"
+          />
+          <div
+            style="color: red; font-size: 15px"
+            *ngIf="name.errors?.required && name.dirty"
+          >
+            Student Name is required
+          </div>
+          {{ name.errors | json }}
         </div>
         <div>
           Student Id:
-          <input type="number" name="id" [ngModel]="detail?.id" />
+          <input
+            type="number"
+            name="id"
+            required
+            #id="ngModel"
+            [ngModel]="detail?.id"
+          />
+          <div
+            style="color: red; font-size: 15px"
+            *ngIf="id.errors?.required && id.dirty"
+          >
+            Id is required
+          </div>
+          {{ id.errors | json }}
         </div>
-        <div>
+        <!-- <div>
           In Honor Group?
           <label>
             <input
@@ -34,7 +60,19 @@
             />
             No
           </label>
+        </div> -->
+        <div>
+          In Honor Group?
+          <label for="">
+            <input
+              type="checkbox"
+              name="isHonor"
+              [ngModel]="detail?.isHonor"
+              (ngModelChange)="toggleIsHonor($event)"
+            />
+          </label>
         </div>
+
         <div *ngIf="form.value.isHonor">
           Is Honor Enrollment Date:
           <input
@@ -43,7 +81,31 @@
             [ngModel]="detail?.enrollmentDate"
           />
         </div>
-        {{ form.value | json }}
+
+        <!-- <div>
+          Area:
+          <select name="studyArea" [ngModel]="detail?.studyArea" id="">
+            <option
+              *ngFor="let item of studyAreas"
+              [value]="item.key"
+              [selected]="item.key === detail?.studyArea"
+            >
+              {{ item.value }}
+            </option>
+          </select>
+        </div> -->
+
+        <div>
+          Area:
+          <select name="studyArea" [ngModel]="detail?.studyArea" id="">
+            <option *ngFor="let item of studyAreas" [ngValue]="item.key">
+              {{ item.value }}
+            </option>
+          </select>
+        </div>
+        <div>{{ form.value | json }}</div>
+        <div>Valid: {{ form.valid | json }}</div>
+        <div>Invalid: {{ form.invalid | json }}</div>
       </form>
     </div>
   </div>
