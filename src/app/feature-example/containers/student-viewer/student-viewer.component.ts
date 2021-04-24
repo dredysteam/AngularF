@@ -17,4 +17,11 @@ export class StudentViewerComponent implements OnInit {
     this.studDashboardService.getStudent(1).subscribe((data:Student)=> this.student = data)
   }
 
+  onUpdateStudent(event: Student) {
+    this.studDashboardService.updateStudent(event)
+      .subscribe((data: Student) => {
+        this.student = Object.assign({}, this.student, event);
+    })
+  }
+
 }

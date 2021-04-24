@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <form #form="ngForm">
+      <form (ngSubmit)="handleSubmit(form.value, form.valid)" #form="ngForm">
         Student Form(Dump)
         {{ detail | json }}
         <div>
@@ -106,6 +106,8 @@
         <div>{{ form.value | json }}</div>
         <div>Valid: {{ form.valid | json }}</div>
         <div>Invalid: {{ form.invalid | json }}</div>
+
+        <button [disabled]="form.invalid" type="submit">Update Student</button>
       </form>
     </div>
   </div>

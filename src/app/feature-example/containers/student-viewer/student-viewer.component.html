@@ -5,7 +5,10 @@
       {{ student | json }}
     </div>
     <div class="col-9">
-      <app-student-form [detail]="student"></app-student-form>
+      <app-student-form
+        [detail]="student"
+        (update)="onUpdateStudent($event)"
+      ></app-student-form>
     </div>
   </div>
 </div>
