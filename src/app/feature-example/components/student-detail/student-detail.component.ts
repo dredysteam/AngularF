@@ -12,10 +12,13 @@ export class StudentDetailComponent implements OnChanges{
   detail: Student;
 
   @Output()
-  remove: EventEmitter<Student> = new EventEmitter();
+  remove: EventEmitter<Student> = new EventEmitter<Student>();
 
   @Output()
-  edit: EventEmitter<Student> = new EventEmitter();
+  edit: EventEmitter<Student> = new EventEmitter<Student>();
+
+  @Output()
+  view: EventEmitter<Student> = new EventEmitter<Student>();
 
   editing: boolean = false;
 
@@ -43,6 +46,10 @@ export class StudentDetailComponent implements OnChanges{
 
   onRemove() {
     this.remove.emit(this.detail);
+  }
+  goToStudent() {
+    this.view.emit(this.detail);
+    // this.router.navigate(['/students'],this.detail.id);
   }
 
 }

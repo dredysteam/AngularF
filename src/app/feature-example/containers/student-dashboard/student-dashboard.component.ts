@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student} from '../../../shares/interfaces/student';
 import { StudentDashboardService } from '../../student-dashboard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-dashboard',
@@ -11,7 +12,7 @@ export class StudentDashboardComponent implements OnInit {
 
   students: Student[];
 
-  constructor(private studentDashobardService: StudentDashboardService) { }
+  constructor(private studentDashobardService: StudentDashboardService , private router:Router) { }
 
   ngOnInit(): void {
     // When use Promise change subscribe for then
@@ -40,6 +41,9 @@ export class StudentDashboardComponent implements OnInit {
       
     })
     
+  }
+  handleView(event: Student) {
+    this.router.navigate(['/dashboard',event.id])
   }
 
 }
