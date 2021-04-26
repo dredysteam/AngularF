@@ -23,7 +23,7 @@
       "isHonor": true,
       "enrollmentDate": 1490742000000,
       "teachers": "[{name: 'Juana', age: 39},{name: 'Alexa', age: 45}]",
-      "studyArea":"Area3"
+      "studyArea": "Area3"
     },
     {
       "id": 2,
@@ -39,7 +39,7 @@
           "age": 45
         }
       ],
-      "studyArea":null
+      "studyArea": null
     },
     {
       "id": 3,
@@ -47,14 +47,14 @@
       "isHonor": true,
       "enrollmentDate": 1490742000000,
       "teachers": null,
-      "studyArea":"Area1"
+      "studyArea": "Area1"
     },
     {
       "id": 4,
       "name": "Ana",
       "isHonor": false,
       "teachers": null,
-      "studyArea":null
+      "studyArea": null
     },
     {
       "id": 5,
@@ -70,7 +70,7 @@
           "age": 45
         }
       ],
-      "studyArea":"Area2]"
+      "studyArea": "Area2]"
     }
   ]
 }

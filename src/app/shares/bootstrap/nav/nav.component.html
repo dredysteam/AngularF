@@ -34,31 +34,10 @@
               Template Fundamentals
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li>
-                <a class="dropdown-item" routerLink="/interpolation-expressions"
-                  >Interpolation & Expressions</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/property-binding"
-                  >Property Binding</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="event-binding">
-                  Event Binding
-                </a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" routerLink="/two-way-binding"
-                  >Two Way Binding</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/template-ref-variables"
-                  >Template Ref Variables</a
-                >
+              <li *ngFor="let item of templateNav">
+                <a class="dropdown-item" [routerLink]="item.link">{{
+                  item.name
+                }}</a>
               </li>
             </ul>
           </li>
@@ -75,25 +54,10 @@
               Rendering Flows
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li>
-                <a class="dropdown-item" routerLink="/ngif-ngtemplate-syntax"
-                  >NgIf & ngtemplate Syntax</a
+              <li *ngFor="let item of renderingNav">
+                <a class="dropdown-item" [routerLink]="item.link"
+                  >{{item.name}</a
                 >
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/ngfor">NgFor</a>
-              </li>
-
-              <li><hr class="dropdown-divider" /></li>
-
-              <li>
-                <a class="dropdown-item" routerLink="/ngclass">NgClass</a>
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/ngstyle">NgStyle</a>
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/pipesuse">PipesUse</a>
               </li>
             </ul>
           </li>

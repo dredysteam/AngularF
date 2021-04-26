@@ -12,8 +12,18 @@ import { InterpolationExpressionsComponent } from './shares/angular/template-fun
 import { PropertyBindingComponent } from './shares/angular/template-fundamentals/property-binding/property-binding.component';
 import { TemplateRefVariablesComponent } from './shares/angular/template-fundamentals/template-ref-variables/template-ref-variables.component';
 import { TwoWayBindingComponent } from './shares/angular/template-fundamentals/two-way-binding/two-way-binding.component';
+import { NotFoundComponent } from './shares/bootstrap/not-found/not-found.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  // {
+  //   path: '**',
+  //   component: NotFoundComponent,
+  // },
   {
     path: 'interpolation-expressions',
     component:InterpolationExpressionsComponent
@@ -62,6 +72,7 @@ const routes: Routes = [
     path: 'comparch/1',
     component:TdfComponent
   }
+  
 ];
 
 @NgModule({

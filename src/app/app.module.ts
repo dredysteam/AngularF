@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NotFoundComponent } from './shares/bootstrap/not-found/not-found.component';
 
 // shares bootstrap
 import { NavComponent } from './shares/bootstrap/nav/nav.component';
@@ -30,6 +31,7 @@ import { CompArchFeatModulesComponent } from './shares/angular/component-archite
 import { TdfComponent } from './shares/angular/template-driven-forms/tdf/tdf.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,8 @@ import { TdfComponent } from './shares/angular/template-driven-forms/tdf/tdf.com
     NgstyleComponent,
     PipesuseComponent,
     CompArchFeatModulesComponent,
-    TdfComponent
+    TdfComponent,
+    NotFoundComponent
     
   ],
   imports: [
@@ -70,7 +73,8 @@ import { TdfComponent } from './shares/angular/template-driven-forms/tdf/tdf.com
     NgforComponent,
     NgclassComponent,
     NgstyleComponent,
-    PipesuseComponent
+    PipesuseComponent,
+    NotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
